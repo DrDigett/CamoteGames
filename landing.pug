@@ -1,6 +1,20 @@
 doctype html
-// agregamos atributos con "()"
-// y las clases con ".name"
+// agregamos atributos con "()".
+// y las clases con ".name".
+
+
+// div.name = .name
+// si solo hay un hijo podemos utilizar ":".
+// en un "|" en "p" para que reconosca texto.
+-var titulos = ["Titulo Principal", "subtitulo 1", "subtitulo 2", "Subtitulo 3"]
+-var titulo = ["Sub-titulo Principal"]
+-var usuario= "david"
+mixin caja(imagen,titulo,contenido)
+    .caja
+        .caja__imagen: img(src="images/"+imagen)
+        .caja__contenido
+            h3=titulo
+            p=contenido
 html
     head
         meta(charset="UFT-8")
@@ -8,4 +22,21 @@ html
     body
         header
             h1 CamoteGames
-            a.boton registro 
+            if usuario
+                a Hola #{usuario}
+            else
+                a.boton Registro
+        section.intro
+            div.intro__imagen: img(src="images/imagen.png", alt="")
+            .intro__contenido
+                h2 #{titulos[0]} 
+                p
+                    | Lorem ipsum dolor sit amet consectetur, adipisicing
+                    | elit. Distinctio doloribus eos dolorum facilis quo, 
+                    | officiis beatae iure, quis, vitae illo enim cum 
+                    span laboriosam aliquam aperiam id quia magnam dolore sit.
+                a.boton Leer Mas
+        main.contenido
+            +caja("imagen.png",titulos[1], "Lorem ipsum dolor sit amet consectetur, adipisicing")
+            +caja("imagen.png",titulos[2], "Lorem ipsum dolor sit amet consectetur, adipisicing")
+            +caja("imagen.png",titulos[3], "Lorem ipsum dolor sit amet consectetur, adipisicing")
