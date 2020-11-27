@@ -1,31 +1,5 @@
-// agregamos atributos con "()".
-// y las clases con ".name".
-
-
-// div.name = .name
-// si solo hay un hijo podemos utilizar ":".
-// en un "|" en "p" para que reconosca texto.
--var titulos = ["Titulo Principal", "subtitulo 1", "subtitulo 2", "Subtitulo 3"]
--var titulo = ["Sub-titulo Principal"]
--var usuario= "david"
-mixin caja(imagen,titulo,contenido)
-    .caja
-        .caja__imagen: img(src="images/"+imagen)
-        .caja__contenido
-            h3=titulo
-            p=contenido
-doctype html
-html
-    head
-        meta(charset="UFT-8")
-        link(rel="stylesheet", href="css/ejercicio-pug.css")
-    body
-        header
-            h1 CamoteGames
-            if usuario
-                a Hola #{usuario}
-            else
-                a.boton Registro
+extend componentes/plantilla.pug 
+block contenidos
         section.intro
             div.intro__imagen: img(src="images/imagen.png", alt="")
             .intro__contenido
