@@ -1,2 +1,2 @@
 # CamoteGames
-Estoy practicando Pug(anteriormente conocido como Jade) en esta pagina :D
+Estoy practicando Pug(anteriormente conocido como Jade)y Less en esta pagina :D
