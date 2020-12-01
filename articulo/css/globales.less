@@ -30,9 +30,37 @@
     font-family: @fuente1;
     color: @color-primario;
     .fuente(@fuente-base);
+    .darkMode;
   }
   
   h1,h2,h3{
     margin: 0;
     .Oswald
+  }
+
+  @modo-oscuro: false;
+
+  .darkMode() when (@modo-oscuro = true) {
+    background-color: @color-primario;
+  
+    .intro{
+      background-color: @color-secundario;
+    }
+  
+    .articulo--principal {
+      color: @color-claro;
+  
+      h1, h2, h3 {
+        color: @color-secundario;
+      }
+    }
+  
+    .caja__contenido {
+      background-color: @color-secundario;
+      color: @color-claro;
+  
+      a{
+        color: @color-claro;
+      }
+    }
   }
