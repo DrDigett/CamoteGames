@@ -1,4 +1,6 @@
 mixin caja(imagen, category, title, summary)
+
+
 	.caja
 		a(href="#",class="caja__imagen"): img(src="../images/"+imagen)
 		.caja__contenido
@@ -7,6 +9,15 @@ mixin caja(imagen, category, title, summary)
 			p=summary
 		+estadistica
 
+mixin caja2(category,title,summary)
+	
+	.caja
+		.caja__contenido
+			span.caja_categoria=category
+			h3=title
+			p=summary
+		+estadistica
+		
 mixin estadistica
 	.estadistica--articulos: ul
 		li
